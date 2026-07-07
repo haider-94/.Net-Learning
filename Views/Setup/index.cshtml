@@ -4,3 +4,51 @@
 <h1>Setup Verification</h1>
 <p><strong>EF Core message:</strong> @ViewBag.EfMessage</p>
 <p><strong>ADO.NET message:</strong> @ViewBag.AdoMessage</p>
+
+<hr />
+
+<h2>Audit Logs (read with EF Core)</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Action</th>
+            <th>User</th>
+            <th>Timestamp</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var log in ViewBag.EfLogs)
+        {
+            <tr>
+                <td>@log.Id</td>
+                <td>@log.Action</td>
+                <td>@log.UserName</td>
+                <td>@log.Timestamp</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h2>Audit Logs (read with ADO.NET)</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Action</th>
+            <th>User</th>
+            <th>Timestamp</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var log in ViewBag.AdoLogs)
+        {
+            <tr>
+                <td>@log.Id</td>
+                <td>@log.Action</td>
+                <td>@log.UserName</td>
+                <td>@log.Timestamp</td>
+            </tr>
+        }
+    </tbody>
+</table>
