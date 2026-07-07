@@ -11,5 +11,6 @@ namespace QuickPortals.Data
         }
 
         public DbSet<SetupCheck> SetupChecks { get; set; }
+        public DbSet<AuditLog> AuditLogs { get; set; }
     }
 }
