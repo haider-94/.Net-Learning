@@ -1,0 +1,25 @@
+# Build results
+bin/
+obj/
+
+# .NET
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Core
+appsettings.*.local.json
+
+# Rider / Visual Studio
+.vs/
+.idea/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
